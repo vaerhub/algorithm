@@ -1,4 +1,4 @@
-package io.arkvaer.algorithm;
+package io.arkvaer.algorithm.other;
 
 public class TreeNode {
     public Integer value;

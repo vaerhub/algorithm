@@ -1,4 +1,4 @@
-package io.arkvaer.algorithm;
+package io.arkvaer.algorithm.other;
 
 import java.util.ArrayList;
 import java.util.List;
