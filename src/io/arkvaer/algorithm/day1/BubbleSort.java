@@ -1,4 +1,6 @@
-package io.arkvaer.algorithm.sort;
+package io.arkvaer.algorithm.day1;
+
+import io.arkvaer.algorithm.utils.AlgUtil;
 
 /**
  * 实现逻辑: arr[i] 与 arr[i+1] 对比, 若arr[i] > arr[i + 1], 则将两个值交换
@@ -18,7 +20,7 @@ public class BubbleSort {
                 compCount++;
                 if (arr[j-1] > arr[j]) {
                     swapCount++;
-                    SortUtil.swap(arr, j-1, j);
+                    AlgUtil.swap(arr, j-1, j);
                 }
             }
         }
@@ -37,7 +39,7 @@ public class BubbleSort {
             for (int j = i + 1; j < arr.length; j++) {
                 compCount++;
                 if (arr[i] > arr[j]) {
-                    SortUtil.swap(arr, i, j);
+                    AlgUtil.swap(arr, i, j);
                     swapCount++;
                 }
             }
@@ -48,9 +50,9 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         int[] arr = {9, 8, 7, 6, 1, 2, 5, 4, 0, 7, 6, 3,5,4};
-        SortUtil.print(arr);
+        AlgUtil.print(arr);
         bubbleSort(arr);
-        SortUtil.print(arr);
+        AlgUtil.print(arr);
     }
 
 }

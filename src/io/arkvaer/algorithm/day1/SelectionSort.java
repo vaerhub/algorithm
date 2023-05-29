@@ -1,4 +1,6 @@
-package io.arkvaer.algorithm.sort;
+package io.arkvaer.algorithm.day1;
+
+import io.arkvaer.algorithm.utils.AlgUtil;
 
 /**
  * 选择排序
@@ -19,7 +21,7 @@ public class SelectionSort {
             for (int j = i + 1; j < arr.length; j++) {
                 minValIndex = arr[j] < arr[minValIndex] ? j : minValIndex;
             }
-            SortUtil.swap(arr, minValIndex, i);
+            AlgUtil.swap(arr, minValIndex, i);
         }
 
     }
@@ -27,6 +29,6 @@ public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = {4, 7, 9, 0, 2, 7, 4, 9, 4, 6, 8};
         selectionSort(arr);
-        SortUtil.print(arr);
+        AlgUtil.print(arr);
     }
 }
