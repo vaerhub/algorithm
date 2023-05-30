@@ -64,4 +64,5 @@ public class AlgUtil {
         int[] ints = generateRandomArr(10, 5);
         print(ints);
     }
+
 }
