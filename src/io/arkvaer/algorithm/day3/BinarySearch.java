@@ -1,5 +1,7 @@
 package io.arkvaer.algorithm.day3;
 
+import io.arkvaer.algorithm.utils.AlgUtil;
+
 /**
  * 二分法查找
  *
@@ -7,7 +9,7 @@ package io.arkvaer.algorithm.day3;
  * @date 2023/5/30 下午5:37
  */
 public class BinarySearch {
-    public static int find(int arr[], int num) {
+    public static int find(int[] arr, int num) {
         if (arr == null || arr.length == 0) {
             return -1;
         }
@@ -29,7 +31,8 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int[] arr = {1, 5, 6, 11, 88, 99, 100, 166, 222, 333};
-        int index = find(arr, 100);
-        System.out.println(index);
+        int index = find(arr, 88);
+        AlgUtil.print(arr);
+
     }
 }

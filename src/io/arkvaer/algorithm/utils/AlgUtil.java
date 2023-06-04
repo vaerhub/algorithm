@@ -2,6 +2,8 @@ package io.arkvaer.algorithm.utils;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author waver
@@ -41,7 +43,11 @@ public class AlgUtil {
      * @param arr 数组对象
      */
     public static void print(int[] arr) {
-        System.out.println(Arrays.toString(arr));
+        if (arr == null) {
+            throw new AlgException("Array is null");
+        }
+        Logger global = Logger.getGlobal();
+        global.info(Arrays.toString(arr));
     }
 
     public static int[] copyArr(int[] arr) {
@@ -60,8 +66,35 @@ public class AlgUtil {
         return arr;
     }
 
+    /**
+     * 产生递增的随机数组
+     * @param maxSize 最大长度
+     * @param maxValue 最大值
+     * @return 生成的随即数组
+     */
+    public static int[] generateSortedRandomArr(int maxSize, int maxValue) {
+        int count = 0;
+        int[] arr = new int[random.nextInt(maxSize + 1)];
+        int length = arr.length;
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(maxValue + 1);
+            count++;
+            while (i > 0 && arr[i - 1] > arr[i]) {
+                arr[i] = random.nextInt(maxValue + 1);
+            }
+        }
+        if (count < arr.length) {
+            throw new AlgException("没有填充满数组");
+        }
+        if (length > 0 && arr[0] == arr[length - 1]) {
+            AlgUtil.print(arr);
+            throw new AlgException("数组中仅有一个值");
+        }
+        return arr;
+    }
+
     public static void main(String[] args) {
-        int[] ints = generateRandomArr(10, 5);
+        int[] ints = generateSortedRandomArr(15, 3);
         print(ints);
     }
 
