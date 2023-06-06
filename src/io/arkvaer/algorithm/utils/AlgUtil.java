@@ -10,6 +10,7 @@ import java.util.logging.Logger;
  * @date 2023/5/28 下午12:05
  */
 public class AlgUtil {
+    public static Logger global = Logger.getGlobal();
     public static final Random random = new Random();
 
     /**
@@ -46,10 +47,20 @@ public class AlgUtil {
         if (arr == null) {
             throw new AlgException("Array is null");
         }
-        Logger global = Logger.getGlobal();
         global.info(Arrays.toString(arr));
     }
 
+    public static void console(Object s) {
+        global.info(s.toString());
+    }
+
+    public static void printIndex(int length) {
+        int[] indexArr = new int[length];
+        for (int i = 0; i < length; i++) {
+            indexArr[i] = i;
+        }
+        print(indexArr);
+    }
     public static int[] copyArr(int[] arr) {
         return Arrays.copyOf(arr, arr.length);
     }
