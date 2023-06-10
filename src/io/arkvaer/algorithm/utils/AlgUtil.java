@@ -1,6 +1,7 @@
 package io.arkvaer.algorithm.utils;
 
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -50,8 +51,12 @@ public class AlgUtil {
         global.info(Arrays.toString(arr));
     }
 
-    public static void console(Object s) {
-        global.info(s.toString());
+    public static void console(Object obj) {
+        if (Objects.isNull(obj)) {
+            global.info("null");
+        } else {
+            global.info(obj.toString());
+        }
     }
 
     public static void printIndex(int length) {
@@ -61,6 +66,7 @@ public class AlgUtil {
         }
         print(indexArr);
     }
+
     public static int[] copyArr(int[] arr) {
         return Arrays.copyOf(arr, arr.length);
     }
@@ -79,7 +85,8 @@ public class AlgUtil {
 
     /**
      * 产生递增的随机数组
-     * @param maxSize 最大长度
+     *
+     * @param maxSize  最大长度
      * @param maxValue 最大值
      * @return 生成的随即数组
      */
