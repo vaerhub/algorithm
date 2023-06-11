@@ -3,25 +3,33 @@ package io.arkvaer.algorithm.day4;
 /**
  * 反转K范围内的节点
  */
-public class ReverseNodesInKGroup<T> {
-    public static class Node<T>{
-        public T value;
-        public Node<T> next;
-
-        public Node(T value) {
-            this.value = value;
-            this.next = null;
-        }
+public class ReverseNodesInKGroup {
+    // 不要提交这个类
+    public static class ListNode {
+        public int val;
+        public ListNode next;
     }
 
-    public Node<T> reverseKGroup(Node<T> node, int k) {
 
-        int n = 0;
-        while (n <= k) {
-
-            n++;
+    public ListNode getKGroupEnd(ListNode start, int k) {
+        while (--k != 0 && start != null) {
+            start = start.next;
         }
-        return node;
+        return start;
+    }
+
+    public void reverse(ListNode start, ListNode end) {
+        end = end.next;
+        ListNode prev = null;
+        ListNode current = start;
+        ListNode next = null;
+        while (current != end) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        start.next = end;
     }
 
 
