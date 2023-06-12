@@ -1,13 +1,9 @@
 package io.arkvaer.algorithm.day4;
 
 
-import io.arkvaer.algorithm.day4.MergeTwoSortedLists.ListNode;
-
-import java.util.List;
-
 /**
  * 合并两个已排序的链表
- * 测试链接：https://leetcode.cn/problems/merge-two-sorted-lists
+ * 测试链接：<a href="https://leetcode.cn/problems/merge-two-sorted-lists">LeetCode</a>
  *
  * @author waver
  * @date 2023/6/12 上午12:06
