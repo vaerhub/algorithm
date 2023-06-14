@@ -1,4 +1,4 @@
-package io.arkvaer.algorithm.day4;
+package io.arkvaer.algorithm.primary.day4;
 
 /**
  * 反转K范围内的节点

@@ -1,4 +1,4 @@
-package io.arkvaer.algorithm.day3;
+package io.arkvaer.algorithm.primary.day3;
 
 import io.arkvaer.algorithm.utils.AlgUtil;
 
@@ -8,7 +8,7 @@ import io.arkvaer.algorithm.utils.AlgUtil;
  * @author waver
  * @date 2023/6/4 下午8:20
  */
-public class BinarySearchNearRight {
+public class BinarySearchNearLeft {
 
     /**
      * 查找arr中>=num 最左的位置
@@ -25,11 +25,11 @@ public class BinarySearchNearRight {
         for (int i = 0; i < length; i++) {
             if (left <= right) {
                 int mid = (left + right) / 2;
-                if (arr[mid] <= num) {
-                    left = mid;
+                if (arr[mid] >= num) {
                     index = mid;
-                } else {
                     right = mid;
+                } else {
+                    left = mid;
                 }
             }
         }
@@ -41,9 +41,8 @@ public class BinarySearchNearRight {
     public static void main(String[] args) {
         int[] ints = {0,1,2,3,4,4,4,4,4,5,5,5,6,10};
         AlgUtil.console(ints.length);
-        int index = searchNearLeft(ints, 1);
+        int index = searchNearLeft(ints, 5);
         AlgUtil.print(ints);
-        AlgUtil.printIndex(ints.length);
         AlgUtil.console(index);
     }
 }

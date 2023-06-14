@@ -1,4 +1,4 @@
-package io.arkvaer.algorithm.day3;
+package io.arkvaer.algorithm.primary.day3;
 
 import io.arkvaer.algorithm.utils.AlgUtil;
 

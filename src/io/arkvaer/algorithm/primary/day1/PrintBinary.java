@@ -1,4 +1,4 @@
-package io.arkvaer.algorithm.day1;
+package io.arkvaer.algorithm.primary.day1;
 
 /**
  * 打印整数的二进制形式

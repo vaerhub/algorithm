@@ -1,4 +1,4 @@
-package io.arkvaer.algorithm.day5;
+package io.arkvaer.algorithm.primary.day5;
 
 /**
  * 位运算实现加减乘除

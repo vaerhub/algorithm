@@ -1,4 +1,4 @@
-package io.arkvaer.algorithm.day2;
+package io.arkvaer.algorithm.primary.day2;
 
 /**
  * 需求: 实现可以快速计算数组L位置到R位置的和

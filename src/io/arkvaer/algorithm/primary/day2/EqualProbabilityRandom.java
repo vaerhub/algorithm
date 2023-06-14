@@ -1,4 +1,4 @@
-package io.arkvaer.algorithm.day2;
+package io.arkvaer.algorithm.primary.day2;
 
 /**
  *
