@@ -1,12 +1,10 @@
 package io.arkvaer.algorithm.primary.day8;
 
-import com.sun.source.tree.BreakTree;
 import io.arkvaer.algorithm.utils.AlgUtil;
 
 import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Stack;
 
 /**
  * 快速排序
@@ -16,6 +14,13 @@ import java.util.Stack;
  */
 public class QuickSort {
 
+    /**
+     * 对指定范围进行分区
+     * @param arr  需要排序的数组
+     * @param l 左边界
+     * @param r 右边界
+     * @return 分区后 分界值的左边界和右边界下标
+     */
     public int[] partition(int[] arr, int l, int r) {
         int lessIndex = l - 1;
         int moreIndex = r;
@@ -80,18 +85,15 @@ public class QuickSort {
 
 
     public static void main(String[] args) {
-//		int[] arr = { 7, 1, 3, 5, 4, 5, 1, 4, 2, 4, 2, 4 };
-//
-//		splitNum2(arr);
-//		for (int i = 0; i < arr.length; i++) {
-//			System.out.print(arr[i] + " ");
-//		}
         QuickSort quickSort = new QuickSort();
+        int[] arr = {1,5,6,8,4,2,7,4,9};
+        quickSort.quickSort(arr);
+
         int testTime = 500000;
         int maxSize = 100;
         int maxValue = 100;
         boolean succeed = true;
-        System.out.println("test begin");
+        AlgUtil.console("test begin");
         for (int i = 0; i < testTime; i++) {
             int[] arr1 = AlgUtil.generateRandomArr(maxSize, maxValue);
             int[] arr2 = AlgUtil.copyArr(arr1);
@@ -100,14 +102,14 @@ public class QuickSort {
             quickSort.quickSort2(arr2);
             quickSort.quickSort(arr3);
             if (!AlgUtil.isEqual(arr1, arr2) || !AlgUtil.isEqual(arr1, arr3)) {
-                System.out.println("Oops!");
+                AlgUtil.console("Oops!");
                 AlgUtil.print(arr2);
                 AlgUtil.print(arr3);
                 succeed = false;
                 break;
             }
         }
-        System.out.println("test end");
-        System.out.println(succeed ? "Nice!" : "Oops!");
+        AlgUtil.console("test end");
+        AlgUtil.console(succeed ? "Nice!" : "Oops!");
     }
 }
