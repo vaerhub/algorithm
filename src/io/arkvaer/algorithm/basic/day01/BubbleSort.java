@@ -1,4 +1,4 @@
-package io.arkvaer.algorithm.basic;
+package io.arkvaer.algorithm.basic.day01;
 
 import java.util.Arrays;
 
