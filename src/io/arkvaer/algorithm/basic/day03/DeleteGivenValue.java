@@ -1,4 +1,4 @@
-package io.arkvaer.algorithm.basic.day02;
+package io.arkvaer.algorithm.basic.day03;
 
 /**
  * 删除指定value的节点

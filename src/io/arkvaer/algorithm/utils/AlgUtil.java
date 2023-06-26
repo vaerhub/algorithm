@@ -50,11 +50,11 @@ public class AlgUtil {
         global.info(Arrays.toString(arr));
     }
 
-    public static void console(Object obj) {
+    public static void console(Object ...obj) {
         if (Objects.isNull(obj)) {
             global.info("null");
         } else {
-            global.info(obj.toString());
+            global.info(Arrays.toString(obj));
         }
     }
 

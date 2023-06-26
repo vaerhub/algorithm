@@ -1,6 +1,4 @@
-package io.arkvaer.algorithm.basic.day02;
-
-import io.arkvaer.algorithm.utils.AlgUtil;
+package io.arkvaer.algorithm.basic.day03;
 
 /**
  * 反转链表

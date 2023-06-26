@@ -1,4 +1,4 @@
-package io.arkvaer.algorithm.basic.day02;
+package io.arkvaer.algorithm.basic.day03;
 
 import java.util.LinkedList;
 import java.util.Queue;
