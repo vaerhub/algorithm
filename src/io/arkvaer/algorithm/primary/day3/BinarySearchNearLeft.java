@@ -42,7 +42,7 @@ public class BinarySearchNearLeft {
         int[] ints = {0,1,2,3,4,4,4,4,4,5,5,5,6,10};
         AlgUtil.console(ints.length);
         int index = searchNearLeft(ints, 5);
-        AlgUtil.print(ints);
+        AlgUtil.printArray(ints);
         AlgUtil.console(index);
     }
 }

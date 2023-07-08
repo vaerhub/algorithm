@@ -32,7 +32,7 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] arr = {1, 5, 6, 11, 88, 99, 100, 166, 222, 333};
         int index = find(arr, 88);
-        AlgUtil.print(arr);
+        AlgUtil.printArray(arr);
 
     }
 }

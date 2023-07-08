@@ -103,8 +103,8 @@ public class QuickSort {
             quickSort.quickSort(arr3);
             if (!AlgUtil.isEqual(arr1, arr2) || !AlgUtil.isEqual(arr1, arr3)) {
                 AlgUtil.console("Oops!");
-                AlgUtil.print(arr2);
-                AlgUtil.print(arr3);
+                AlgUtil.printArray(arr2);
+                AlgUtil.printArray(arr3);
                 succeed = false;
                 break;
             }

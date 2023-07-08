@@ -112,8 +112,8 @@ public class MergeSort {
 //            mergeSort2(arr2);
             if (!AlgUtil.isEqual(arr1, arr2)) {
                 AlgUtil.console("出错了！");
-                AlgUtil.print(arr1);
-                AlgUtil.print(arr2);
+                AlgUtil.printArray(arr1);
+                AlgUtil.printArray(arr2);
                 break;
             }
         }

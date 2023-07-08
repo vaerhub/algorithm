@@ -43,7 +43,7 @@ public class AlgUtil {
      *
      * @param arr 数组对象
      */
-    public static void print(int[] arr) {
+    public static void printArray(int[] arr) {
         if (arr == null) {
             throw new AlgException("Array is null");
         }
@@ -63,7 +63,7 @@ public class AlgUtil {
         for (int i = 0; i < length; i++) {
             indexArr[i] = i;
         }
-        print(indexArr);
+        printArray(indexArr);
     }
 
     public static int[] copyArr(int[] arr) {
@@ -104,7 +104,7 @@ public class AlgUtil {
             throw new AlgException("没有填充满数组");
         }
         if (length > 0 && arr[0] == arr[length - 1]) {
-            AlgUtil.print(arr);
+            AlgUtil.printArray(arr);
             throw new AlgException("数组中仅有一个值");
         }
         return arr;
@@ -112,7 +112,7 @@ public class AlgUtil {
 
     public static void main(String[] args) {
         int[] ints = generateSortedRandomArr(15, 3);
-        print(ints);
+        printArray(ints);
     }
 
 }

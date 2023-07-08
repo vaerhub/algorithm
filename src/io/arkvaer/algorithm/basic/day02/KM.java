@@ -106,7 +106,7 @@ public class KM {
             int ans1 = test(arr, k, m);
             int ans2 = oneKTime(arr, k, m);
             if (ans1 != ans2) {
-                AlgUtil.print(arr);
+                AlgUtil.printArray(arr);
                 AlgUtil.console(ans1);
                 AlgUtil.console(ans2);
                 AlgUtil.console("!!!!!!出错了!!!!!!");

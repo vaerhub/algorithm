@@ -50,9 +50,9 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         int[] arr = {9, 8, 7, 6, 1, 2, 5, 4, 0, 7, 6, 3,5,4};
-        AlgUtil.print(arr);
+        AlgUtil.printArray(arr);
         bubbleSort(arr);
-        AlgUtil.print(arr);
+        AlgUtil.printArray(arr);
     }
 
 }

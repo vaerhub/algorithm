@@ -90,7 +90,7 @@ public class BinarySearchMinNumInBetween {
             //int[] arr = {4,6,7};
             int ans = searchMinNum(arr);
             //AlgUtil.console(ans);
-            AlgUtil.print(arr);
+            AlgUtil.printArray(arr);
             if (check(arr, ans)) {
                 AlgUtil.console(ans);
                 break;

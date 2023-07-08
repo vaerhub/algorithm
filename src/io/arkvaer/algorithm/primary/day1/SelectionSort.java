@@ -29,6 +29,6 @@ public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = {4, 7, 9, 0, 2, 7, 4, 9, 4, 6, 8};
         selectionSort(arr);
-        AlgUtil.print(arr);
+        AlgUtil.printArray(arr);
     }
 }

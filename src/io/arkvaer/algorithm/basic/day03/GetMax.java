@@ -31,7 +31,7 @@ public class GetMax {
 		int range = 1000;
 		int[] ints = AlgUtil.generateRandomArr(size, range);
 		int max = getMax(ints);
-		AlgUtil.print(ints);
+		AlgUtil.printArray(ints);
 		System.out.println(max);
 	}
 
