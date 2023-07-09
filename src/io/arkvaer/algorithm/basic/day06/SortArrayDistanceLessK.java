@@ -64,7 +64,7 @@ public class SortArrayDistanceLessK {
         int maxValue = 100;
         boolean succeed = true;
         for (int i = 0; i < testTime; i++) {
-            int k = (int) (Math.random() * maxSize) + 1;
+            int k = AlgUtil.random.nextInt(maxSize) + 1;
             int[] arr = randomArrayNoMoveMoreK(maxSize, maxValue, k);
             int[] arr1 = AlgUtil.copyArr(arr);
             int[] arr2 = AlgUtil.copyArr(arr);
