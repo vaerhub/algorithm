@@ -1,9 +1,6 @@
 package io.arkvaer.algorithm.basic.day07;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class EveryStepShowBoss {
 
@@ -97,6 +94,7 @@ public class EveryStepShowBoss {
             for (Customer c : customers) {
                 ans.add(c.id);
             }
+            Collections.sort(ans);
             return ans;
         }
 
@@ -129,6 +127,7 @@ public class EveryStepShowBoss {
             whoDaddies.operate(i, arr[i], op[i]);
             ans.add(whoDaddies.getDaddies());
         }
+
         return ans;
     }
 
@@ -207,7 +206,7 @@ public class EveryStepShowBoss {
         }
     }
 
-    public static void cleanZeroBuy(ArrayList<Customer> arr) {
+    public static void cleanZeroBuy(List<Customer> arr) {
         List<Customer> noZero = new ArrayList<Customer>();
         for (Customer c : arr) {
             if (c.buy != 0) {
@@ -220,11 +219,12 @@ public class EveryStepShowBoss {
         }
     }
 
-    public static List<Integer> getCurAns(ArrayList<Customer> daddy) {
+    public static List<Integer> getCurAns(List<Customer> daddy) {
         List<Integer> ans = new ArrayList<>();
         for (Customer c : daddy) {
             ans.add(c.id);
         }
+        Collections.sort(ans);
         return ans;
     }
 
@@ -262,8 +262,8 @@ public class EveryStepShowBoss {
             if (cur1.size() != cur2.size()) {
                 return false;
             }
-            cur1.sort((a, b) -> a - b);
-            cur2.sort((a, b) -> a - b);
+            cur1.sort(Comparator.comparingInt(a -> a));
+            cur2.sort(Comparator.comparingInt(a -> a));
             for (int j = 0; j < cur1.size(); j++) {
                 if (!cur1.get(j).equals(cur2.get(j))) {
                     return false;
@@ -298,6 +298,13 @@ public class EveryStepShowBoss {
             }
         }
         System.out.println("测试结束");
+
+/*        int[] arr = {7, 5, 2, 9, 8, 6, 8, 7, 4, 4};
+        boolean[] op = {true, true, true, true, true, true, false, false, true, true};
+        List<List<Integer>> lists = topK(arr, op, 4);
+        List<List<Integer>> compare = compare(arr, op, 4);
+        System.out.println(lists);
+        System.out.println(compare);*/
     }
 
 }

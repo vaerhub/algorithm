@@ -5,111 +5,110 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * 加强堆
- *
- * @author waver
- * @date 2023/7/9 17:40
- */
 public class HeapGreater<T> {
-    private ArrayList<T> heap;
-    private HashMap<T, Integer> indexMap;
-    private int heapSize;
-    private Comparator<T> comparator;
 
-    public HeapGreater(Comparator<T> comparator) {
-        this.heap = new ArrayList<>();
-        this.indexMap = new HashMap<>();
-        this.heapSize = 0;
-        this.comparator = comparator;
-    }
+	private ArrayList<T> heap;
+	private HashMap<T, Integer> indexMap;
+	private int heapSize;
+	private Comparator<? super T> comp;
 
+	public HeapGreater(Comparator<? super T> c) {
+		heap = new ArrayList<>();
+		indexMap = new HashMap<>();
+		heapSize = 0;
+		comp = c;
+	}
 
-    public boolean isEmpty() {
-        return heapSize == 0;
-    }
+	public boolean isEmpty() {
+		return heapSize == 0;
+	}
 
+	public int size() {
+		return heapSize;
+	}
 
-    public int size() {
-        return heapSize;
-    }
+	public boolean contains(T obj) {
+		return indexMap.containsKey(obj);
+	}
 
-    public List<T> getAllElements() {
-        return List.copyOf(heap);
-    }
+	public T peek() {
+		return heap.get(0);
+	}
 
-    public boolean contains(T obj) {
-        return indexMap.containsKey(obj);
-    }
+	public void push(T obj) {
+		heap.add(obj);
+		indexMap.put(obj, heapSize);
+		heapInsert(heapSize++);
+	}
 
+	public T pop() {
+		T ans = heap.get(0);
+		swap(0, heapSize - 1);
+		indexMap.remove(ans);
+		heap.remove(--heapSize);
+		heapify(0);
+		return ans;
+	}
 
-    public T pop() {
-        T result = heap.get(0);
-        swap(0, heapSize - 1);
-        indexMap.remove(result);
-        heap.remove(heapSize--);
-        heapify(0);
-        return result;
-    }
+	public void remove(T obj) {
+		T replace = heap.get(heapSize - 1);
+		int index = indexMap.get(obj);
+		indexMap.remove(obj);
+		heap.remove(--heapSize);
+		if (obj != replace) {
+			heap.set(index, replace);
+			indexMap.put(replace, index);
+			resign(replace);
+		}
+	}
 
+	public void resign(T obj) {
+		heapInsert(indexMap.get(obj));
+		heapify(indexMap.get(obj));
+	}
 
-    public void push(T obj) {
-        heap.add(obj);
-        indexMap.put(obj, heapSize);
-        heapInsert(heapSize++);
-    }
+	// 请返回堆上的所有元素
+	public List<T> getAllElements() {
+		List<T> ans = new ArrayList<>();
+		for (T c : heap) {
+			ans.add(c);
+		}
+		return ans;
+	}
 
-    public void remove(T obj) {
-        T replace = heap.get(heapSize - 1);
-        int index = indexMap.get(obj);
-        indexMap.remove(obj);
-        heap.remove(--heapSize);
-        if (obj != replace) {
-            heap.set(index, replace);
-            indexMap.put(replace, index);
-            resign(replace);
-        }
-    }
+	private void heapInsert(int index) {
+		while (comp.compare(heap.get(index), heap.get((index - 1) / 2)) < 0) {
+			swap(index, (index - 1) / 2);
+			index = (index - 1) / 2;
+		}
+	}
 
-    public T peek() {
-        return heap.get(0);
-    }
+	private void heapify(int index) {
+		int left = index * 2 + 1;
+		while (left < heapSize) {
+			int best = left + 1 < heapSize && comp.compare(heap.get(left + 1), heap.get(left)) < 0 ? (left + 1) : left;
+			best = comp.compare(heap.get(index), heap.get(best)) < 0 ? index : best;
+			if (best == index) {
+				break;
+			}
+			swap(best, index);
+			index = best;
+			left = index * 2 + 1;
+		}
+	}
 
-    public void resign(T obj) {
-        heapInsert(indexMap.get(obj));
-        heapify(indexMap.get(obj));
-    }
+	private void swap(int i, int j) {
+		T o1 = heap.get(i);
+		T o2 = heap.get(j);
+		heap.set(i, o2);
+		heap.set(j, o1);
+		indexMap.put(o2, i);
+		indexMap.put(o1, j);
+	}
 
-    public void heapInsert(int index) {
-        while (comparator.compare(heap.get(index), heap.get((index - 1) / 2)) > 0) {
-            swap(index, (index - 1) / 2);
-            index = (index - 1) / 2;
-        }
-    }
-
-
-    public void heapify(int index) {
-        int left = index * 2 + 1;
-        while (left < heapSize) {
-            int largest = left + 1 < heapSize && comparator.compare(heap.get(left), heap.get(left + 1)) > 0 ? left : left + 1;
-            largest = comparator.compare(heap.get(index), heap.get(largest)) > 0 ? index : largest;
-            if (largest == index) {
-                return;
-            }
-            swap(largest, index);
-            index = largest;
-            left = index * 2 + 1;
-        }
-    }
-
-
-    public void swap(int i, int j) {
-        T m = heap.get(i);
-        T n = heap.get(j);
-        indexMap.put(m, j);
-        indexMap.put(n, i);
-        heap.set(i, n);
-        heap.set(j, m);
-    }
-
+	public static void main(String[] args) {
+		int max = 0;
+		max = Integer.compare(1, 3) < 0? 1: 3;
+		System.out.println(max);
+	}
 }

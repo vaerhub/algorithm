@@ -2,8 +2,6 @@ package io.arkvaer.algorithm.basic.day04;
 
 import io.arkvaer.algorithm.utils.AlgUtil;
 
-import java.util.Arrays;
-
 public class SmallSum {
     public static int smallSum(int[] arr) {
         if (AlgUtil.notNeedSort(arr)) {

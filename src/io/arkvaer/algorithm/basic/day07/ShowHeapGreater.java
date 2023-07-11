@@ -1,5 +1,7 @@
 package io.arkvaer.algorithm.basic.day07;
 
+import java.util.Comparator;
+
 /**
  * @author waver
  * @date 2023/7/9 22:51
@@ -18,7 +20,7 @@ public class ShowHeapGreater {
         Student s6 = new Student(93, "F同学");
         // 生成一个加强堆
         // 排序策略是年龄小的放在堆顶，年龄小根堆
-        HeapGreater<Student> heap1 = new HeapGreater<>((a, b) -> a.age - b.age);
+        MyHeapGreater<Student> heap1 = new MyHeapGreater<>((a, b) -> a.age - b.age);
         // 把所有学生加入堆
         heap1.push(s1);
         heap1.push(s2);
@@ -59,7 +61,7 @@ public class ShowHeapGreater {
         // 加强堆里只放下标即可，因为通过下标可以找到数字
         // 排序策略是 :
         // 数字小的下标，在堆顶
-        HeapGreater<Integer> heap2 = new HeapGreater<>((i, j) -> arr[i] - arr[j]);
+        MyHeapGreater<Integer> heap2 = new MyHeapGreater<>(Comparator.comparingInt(i -> arr[i]));
 
         // 把数组所有的下标加入堆
         // 就等于加入了所有数字
