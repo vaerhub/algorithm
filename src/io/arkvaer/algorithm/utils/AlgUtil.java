@@ -28,6 +28,15 @@ public class AlgUtil {
         }
     }
 
+
+    public static <T> void swap(T[] arr, int i, int j) {
+        if (i != j) {
+            T temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+
     /**
      * 判断当前数组是否不需要排序
      *
@@ -50,7 +59,7 @@ public class AlgUtil {
         global.info(Arrays.toString(arr));
     }
 
-    public static void console(Object ...obj) {
+    public static void console(Object... obj) {
         if (Objects.isNull(obj)) {
             global.info("null");
         } else {
