@@ -14,13 +14,13 @@ public class Main {
     }
 
     public static void calcWorkTime() throws ParseException {
-        SimpleDateFormat dateTimeFormat = new SimpleDateFormat("yyyy-MM-dd HH.mm.ss");
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        Date now = new Date();
-        String today = dateFormat.format(now);
+        SimpleDateFormat dateTimeFormat = new SimpleDateFormat("HH.mm.ss");
+//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//        Date now = new Date();
+//        String today = dateFormat.format(now);
         System.out.print("请输入上班时间: ");
         Scanner scanner = new Scanner(System.in);
-        Date arriveTime = dateTimeFormat.parse(today + " " + scanner.nextLine() + ".00");
+        Date arriveTime = dateTimeFormat.parse( scanner.nextLine() + ".00");
         System.out.println("上班时间: " + dateTimeFormat.format(arriveTime));
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(arriveTime);
