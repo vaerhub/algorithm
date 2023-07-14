@@ -1,7 +1,5 @@
 package io.arkvaer.algorithm.basic.day11;
 
-import io.arkvaer.algorithm.basic.day10.RecursiveTraversalBinaryTree;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
