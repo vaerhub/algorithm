@@ -1,5 +1,7 @@
 package io.arkvaer.algorithm.basic.day11;
 
+import io.arkvaer.algorithm.basic.day10.RecursiveTraversalBinaryTree;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,12 +16,12 @@ public class PrintTree {
      * 3. 第n层的分支长度为 2^n
      */
 
-    public static String branch = "-----";
-    public static String leftBranch = "  |--";
-    public static String rightBranch = "--|  ";
-    public static String midBranch = "--|--";
-    public static String space = "     ";
-    public static String spaceVal = "  ";
+    static String branch = "-----";
+    static String leftBranch = "  |--";
+    static String rightBranch = "--|  ";
+    static String midBranch = "--|--";
+    static String space = "     ";
+    static String spaceVal = "  ";
 
     public static class Node {
         public int value;
@@ -38,24 +40,36 @@ public class PrintTree {
         }
 
         int maxHigh = getMaxHigh(root);
+        fullTheTree(root, maxHigh);
+
         Node curEnd = root;
         Node nextEnd = null;
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
         List<String> nodeList = new ArrayList<>(maxHigh);
-        List<String> brancheList = new ArrayList<>(maxHigh);
+        List<String> branchList = new ArrayList<>(maxHigh);
         StringBuilder nodeBuilder = new StringBuilder();
-
         StringBuilder branchBuilder = new StringBuilder();
         while (!queue.isEmpty()) {
             root = queue.poll();
-            nodeBuilder.append(getSpaceRepeatNum(space, (int) Math.pow(2, maxHigh) - 1).append(getValueSpace(root.value)));
-            branchBuilder.append(getSpaceRepeatNum(space, (int) Math.pow(2, maxHigh - 1) - 1)
-                    .append(leftBranch)
-                    .append(getSpaceRepeatNum(branch, (int) Math.pow(2, maxHigh - 1) - 1))
-                    .append(midBranch)
-                    .append(getSpaceRepeatNum(branch, (int) Math.pow(2, maxHigh - 1) - 1))
-                    .append(rightBranch));
+            if (root.value == Integer.MIN_VALUE) {
+                nodeBuilder.append(getSpaceRepeatNum(space, (int) Math.pow(2, (maxHigh + 1)) - 1).append(space));
+                branchBuilder.append(getSpaceRepeatNum(space, (int) Math.pow(2, (maxHigh + 1))));
+            } else {
+                nodeBuilder.append(getSpaceRepeatNum(space, (int) Math.pow(2, maxHigh) - 1) // 左侧空格
+                                .append(getValueSpace(root.value)))
+                        .append(getSpaceRepeatNum(space, (int) Math.pow(2, maxHigh) - 1))
+                        .append(space);
+                branchBuilder.append(getSpaceRepeatNum(space, (int) Math.pow(2, (maxHigh - 1)) - 1) // 分支左侧空格
+                                .append(leftBranch) // 分支左端
+                                .append(getSpaceRepeatNum(branch, (int) Math.pow(2, (maxHigh - 1)) - 1)) // 左分支
+                                .append(midBranch) // 节点处分支
+                                .append(getSpaceRepeatNum(branch, (int) Math.pow(2, (maxHigh - 1)) - 1)) // 右分支
+                                .append(rightBranch)) // 分支右端
+                        .append(getSpaceRepeatNum(space, (int) Math.pow(2, (maxHigh - 1))));
+
+            }
+
             if (root.left != null) {
                 queue.add(root.left);
                 nextEnd = root.left;
@@ -65,11 +79,10 @@ public class PrintTree {
                 queue.add(root.right);
                 nextEnd = root.right;
             }
-            nodeBuilder.append(getSpaceRepeatNum(space, (int) Math.pow(2, maxHigh) - 1)).append(space);
-            branchBuilder.append(getSpaceRepeatNum(space, (int) Math.pow(2, maxHigh - 1)));
+
             if (root == curEnd) {
                 nodeList.add(nodeBuilder.toString());
-                brancheList.add(branchBuilder.toString());
+                branchList.add(branchBuilder.toString());
                 nodeBuilder = new StringBuilder();
                 branchBuilder = new StringBuilder();
                 curEnd = nextEnd;
@@ -77,7 +90,7 @@ public class PrintTree {
             }
         }
 
-        print(nodeList, brancheList);
+        print(nodeList, branchList);
 
     }
 
@@ -165,25 +178,58 @@ public class PrintTree {
     }
 
 
+    public static void fullTheTree(Node head, int height) {
+        pre(head, height, 0);
+    }
+
+    public static void pre(Node head, int height, int level) {
+        level++;
+        if (height > level) {
+            if (head == null) {
+                head = getEmptyNode();
+            }
+            if (head.left == null) {
+                head.left = getEmptyNode();
+            }
+            if (head.right == null) {
+                head.right = getEmptyNode();
+            }
+        }
+        if (head == null) {
+            return;
+        }
+        pre(head.left, height, level);
+        pre(head.right, height, level);
+
+
+    }
+
+    public static Node getEmptyNode() {
+        return new Node(Integer.MIN_VALUE);
+    }
+
     public static void main(String[] args) {
         Node head = new Node(1);
-
-        head.left = new Node(10001);
-        head.right = new Node(11111);
+        head.left = new Node(2);
+        head.right = new Node(3);
 
         head.left.left = new Node(4);
         head.left.right = new Node(5);
         head.right.left = new Node(6);
         head.right.right = new Node(7);
+//
+//        head.left.left.left = new Node(8);
+//        head.left.left.right = new Node(9);
+//        head.left.right.left = new Node(10);
+//        head.left.right.right = new Node(11);
+//        head.right.left.left = new Node(12);
+//        head.right.left.right = new Node(13);
+//        head.right.right.left = new Node(14);
+//        head.right.right.right = new Node(15);
+//
+//        head.right.left.right.left = new Node(9);
+//        head.right.right.right.right = new Node(9);
 
-        head.left.left.left = new Node(8);
-        head.left.left.right = new Node(9);
-        head.left.right.left = new Node(10);
-        head.left.right.right = new Node(11);
-        head.right.left.left = new Node(12);
-        head.right.left.right = new Node(13);
-        head.right.right.left = new Node(14);
-        head.right.right.right = new Node(15);
         printTree(head);
     }
 }
