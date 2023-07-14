@@ -20,10 +20,11 @@ public class FindSuccessorNode {
         if (head == null) {
             return null;
         }
-        // 存在右子树时, 右子树的根节点就是当前节点的 后继
+        // 存在右子树时, 右子树的最左节点就是当前节点的 后继节点
         if (head.right != null) {
             return getMostLeftNode(head.right);
         } else {
+            // 没有右子树时, 寻找父亲节点, 当前节点为父亲节点的左子树时, 当前的父节点就是该节点的后继节点
             Node parent = head.parent;
             while (parent != null && head != parent.left) {
                 head = parent;
