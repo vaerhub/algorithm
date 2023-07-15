@@ -1,5 +1,7 @@
 package io.arkvaer.algorithm.basic.day12;
 
+import io.arkvaer.algorithm.utils.AlgUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -126,7 +128,7 @@ public class IsBST {
         if (level > maxLevel || Math.random() < 0.5) {
             return null;
         }
-        Node head = new Node((int) (Math.random() * maxValue));
+        Node head = new Node(AlgUtil.random.nextInt( maxValue));
         head.left = generate(level + 1, maxLevel, maxValue);
         head.right = generate(level + 1, maxLevel, maxValue);
         return head;
