@@ -2,7 +2,6 @@ package io.arkvaer.algorithm.basic.day24;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * 假设一个固定大小为W的窗口，
@@ -14,7 +13,7 @@ public class SlidingWindowMaxArray {
     // 暴力的对数器方法
     public static int[] right(int[] arr, int w) {
         if (arr == null || w < 1 || arr.length < w) {
-            return null;
+            return new int[0];
         }
         int N = arr.length;
         int[] res = new int[N - w + 1];
