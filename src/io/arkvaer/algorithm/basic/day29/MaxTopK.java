@@ -3,8 +3,6 @@ package io.arkvaer.algorithm.basic.day29;
 import io.arkvaer.algorithm.utils.AlgUtil;
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 
 /**
  * 给定一个无序数组arr中，长度为N，给定一个正数L，返回top K个最大的数
@@ -72,6 +70,9 @@ public class MaxTopK {
         }
     }
 
+    /**
+     * 方法3 O(n + k*logK)
+     */
     public static int[] maxTopK3(int[] arr, int k) {
         if (arr == null || arr.length == 0) {
             return new int[0];
@@ -79,6 +80,8 @@ public class MaxTopK {
         int len = arr.length;
         k = Math.min(len, k);
         int[] ans = new int[k];
+        // 时间复杂度 O(N)
+        // 获取len - k 小的数字的下标
         int num = minKth(arr, len - k);
         int index = 0;
         for (int j : arr) {
@@ -89,6 +92,7 @@ public class MaxTopK {
         for (; index < k; index++) {
             ans[index] = num;
         }
+        // 时间复杂度 O(k*logk)
         Arrays.sort(ans);
         for (int l = 0, r = k - 1; l < r; l++, r--) {
             AlgUtil.swap(ans, l, r);
