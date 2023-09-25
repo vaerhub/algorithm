@@ -3,6 +3,8 @@ package io.arkvaer.algorithm.basic.day29;
 import io.arkvaer.algorithm.utils.AlgUtil;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * 给定一个无序数组arr中，长度为N，给定一个正数L，返回top K个最大的数
@@ -17,7 +19,7 @@ public class MaxTopK {
     // 排序+收集
     public static int[] maxTopK1(int[] arr, int k) {
         if (arr == null || arr.length == 0) {
-            return new int[]{0};
+            return new int[0];
         }
         int len = arr.length;
         Arrays.sort(arr);
@@ -29,9 +31,12 @@ public class MaxTopK {
         return ans;
     }
 
+    /**
+     * 方法二，时间复杂度O(N + K*logN)
+     */
     public static int[] maxTopK2(int[] arr, int k) {
         if (arr == null || arr.length == 0) {
-            return new int[]{0};
+            return new int[0];
         }
         int len = arr.length;
         k = Math.min(k, len);
@@ -66,6 +71,66 @@ public class MaxTopK {
             left = index * 2 + 1;
         }
     }
+
+    public static int[] maxTopK3(int[] arr, int k) {
+        if (arr == null || arr.length == 0) {
+            return new int[0];
+        }
+        int len = arr.length;
+        k = Math.min(len, k);
+        int[] ans = new int[k];
+        int num = minKth(arr, len - k);
+        int index = 0;
+        for (int j : arr) {
+            if (j > num) {
+                ans[index++] = j;
+            }
+        }
+        for (; index < k; index++) {
+            ans[index] = num;
+        }
+        Arrays.sort(ans);
+        for (int l = 0, r = k - 1; l < r; l++, r--) {
+            AlgUtil.swap(ans, l, r);
+        }
+        return ans;
+    }
+
+    public static int minKth(int[] arr, int index) {
+        int l = 0;
+        int r = arr.length - 1;
+        int pivot;
+        int[] range;
+        while (l < r) {
+            pivot = arr[l + AlgUtil.random.nextInt(r - l + 1)];
+            range = partition(arr, l, r, pivot);
+            if (index < range[0]) {
+                r = range[0] - 1;
+            } else if (index > range[1]) {
+                l = range[1] + 1;
+            } else {
+                return pivot;
+            }
+        }
+        return arr[l];
+    }
+
+    private static int[] partition(int[] arr, int l, int r, int pivot) {
+        int less = l - 1;
+        int more = r + 1;
+        int cur = l;
+        while (cur < more) {
+            if (arr[cur] < pivot) {
+                AlgUtil.swap(arr, cur++, ++less);
+            } else if (arr[cur] > pivot) {
+                AlgUtil.swap(arr, cur, --more);
+            } else {
+                cur++;
+            }
+        }
+        return new int[]{less + 1, more - 1};
+    }
+
 
     // for test
     public static int[] generateRandomArray(int maxSize, int maxValue) {
@@ -129,19 +194,19 @@ public class MaxTopK {
         for (int i = 0; i < testTime; i++) {
             int k = (int) (Math.random() * maxSize) + 1;
             int[] arr = generateRandomArray(maxSize, maxValue);
-            int[] arr1 = copyArray(arr);
-            int[] arr2 = copyArray(arr);
-            int[] arr3 = copyArray(arr);
+            int[] arr1 = AlgUtil.copyArr(arr);
+            int[] arr2 = AlgUtil.copyArr(arr);
+            int[] arr3 = AlgUtil.copyArr(arr);
 
             int[] ans1 = maxTopK1(arr1, k);
             int[] ans2 = maxTopK2(arr2, k);
-            //int[] ans3 = maxTopK3(arr3, k);
-            if (!isEqual(ans1, ans2)) {
+            int[] ans3 = maxTopK3(arr3, k);
+            if (!isEqual(ans1, ans2) || !isEqual(ans1, ans3)) {
                 pass = false;
                 System.out.println("出错了！");
                 printArray(ans1);
                 printArray(ans2);
-              //  printArray(ans3);
+                printArray(ans3);
                 break;
             }
         }
