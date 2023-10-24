@@ -62,19 +62,64 @@ public class AC1 {
                         // 如果父节点的fail不为空
                         while (faFail != null) {
                             // 父节点的fail节点是否有指向 与当前子节点相同的子节点
-                            if (faFail.nextArr[i].fail != null) {
+                            if (faFail.nextArr[i] != null) {
                                 // 如果存在, 则将当前节点的fail指向该子节点
                                 father.nextArr[i].fail = faFail.nextArr[i];
                                 break;
                             }
-                            // 若不存在, 则找到父节点的fail节点
+                            // 若不存在, 则跳转到父节点的fail节点, 继续查询是否有与当前节点相同的节点
                             faFail = faFail.fail;
                         }
+                        queue.add(father.nextArr[i]);
                     }
                 }
             }
         }
 
+        /**
+         * 检测内容中包含的敏感词
+         * @param content 待检测的内容
+         * @return 找到 敏感词的数量(种数)
+         */
+        public int containNum(String content) {
+            char[] charArray = content.toCharArray();
+            Node cur = root;
+            Node follow;
+            int index;
+            int result = 0;
+            for (int i = 0; i < content.length(); i++) {
+                index = charArray[i] - 'a';
+                while (cur.nextArr[index] == null && cur != root) {
+                    cur = cur.fail;
+                }
+                cur = cur.nextArr[index] != null ? cur.nextArr[index] : root;
+                follow = cur;
+                while (follow != root) {
+                    if (follow.end == -1) {
+                        break;
+                    }
+                    result += follow.end;
+                    follow.end = -1;
+
+                    follow = follow.fail;
+                }
+            }
+            return result;
+        }
+    }
+
+
+
+    public static void main(String[] args) {
+        ACAutomation ac = new ACAutomation();
+        ac.insert("abc");
+        ac.insert("bcd");
+        ac.insert("acd");
+        ac.insert("abcd");
+        ac.insert("abcde");
+        ac.build();
+        int containNum = ac.containNum("fasdfjkjkfasdjbkkjhhjkjhkfasdjhkjhbvsdabnfbnahuifdhwbhasdvbfbabfaguufabbacdaafchhhfabc");
+        System.out.println(containNum);
 
     }
 
