@@ -100,7 +100,6 @@ public class AC2 {
         ac.insert("abcdheks");
         // 设置fail指针
         ac.build();
-
         List<String> contains = ac.containWords("abcdhekskdjfafhasldkflskdjhwqaeruv");
         for (String word : contains) {
             System.out.println(word);
