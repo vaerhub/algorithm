@@ -1,0 +1,16 @@
+
+R
+java:S2589U"7Remove this expression which always evaluates to "true"(Äƒ“ÿÿÿÿÿ
+?
+java:S2140=")Use "java.util.Random.nextInt()" instead.(¬ÉÖï
+?
+java:S2140?")Use "java.util.Random.nextInt()" instead.(ŠÓŸÏ
+F
+java:S2140?")Use "java.util.Random.nextInt()" instead.(ŠÓŸÏ8·ÀÚë“1
+<
+java:S1168G"&Return an empty array instead of null.(¥¹ï
+t
+java:S3012K"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(½ÁÜŠüÿÿÿÿ
+N	java:S106i"9Replace this use of System.out or System.err by a logger.(º¼É°
+Z	java:S106k"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¾ÀÚë“1
+S	java:S106~"9Replace this use of System.out or System.err by a logger.(õ¡‹¾ûÿÿÿÿ

@@ -1,0 +1,8 @@
+
+f	java:S117c"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ ¥î
+h
+java:S37767"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(øËÊ‚
+D
+java:S2140\")Use "java.util.Random.nextInt()" instead.(‰Âßÿÿÿÿÿ
+D
+java:S2140g")Use "java.util.Random.nextInt()" instead.(Ñ¢ùÿÿÿÿ

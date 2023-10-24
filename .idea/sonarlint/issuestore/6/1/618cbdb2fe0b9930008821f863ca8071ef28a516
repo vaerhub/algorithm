@@ -1,0 +1,11 @@
+
+f	java:S117J"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ÑÕÆ
+f	java:S117e"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ÑÕÆ
+?
+java:S2140J")Use "java.util.Random.nextInt()" instead.(¨ÑÕÆ
+D
+java:S2140O")Use "java.util.Random.nextInt()" instead.(ÔŒÐñøÿÿÿÿ
+?
+java:S2140e")Use "java.util.Random.nextInt()" instead.(¨ÑÕÆ
+D
+java:S2140g")Use "java.util.Random.nextInt()" instead.(‚ƒ±Áûÿÿÿÿ

@@ -1,0 +1,11 @@
+
+s
+java:S1104"QMake value a static final constant or non-public and provide accessors if needed.(‚¯¥ùÿÿÿÿ8ƒ¼ßœ–1
+m
+java:S1104"PMake left a static final constant or non-public and provide accessors if needed.(ó÷ÔÄ8ƒ¼ßœ–1
+n
+java:S1104"QMake right a static final constant or non-public and provide accessors if needed.(Ö¢è¥8ƒ¼ßœ–1
+F
+java:S2140S")Use "java.util.Random.nextInt()" instead.(ÁíŞ8‘¼ßœ–1
+U	java:S106`"9Replace this use of System.out or System.err by a logger.(„½˜Ù8¡Ù–1
+Z	java:S106c"9Replace this use of System.out or System.err by a logger.(¤ÂÓÊÿÿÿÿÿ8‡ïš–1

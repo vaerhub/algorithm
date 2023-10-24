@@ -1,0 +1,46 @@
+
+t
+java:S2293,"YReplace the type specification in this constructor call with the diamond operator ("<>").(›²Ü‘ÿÿÿÿÿ
+u
+java:S2293Ò"YReplace the type specification in this constructor call with the diamond operator ("<>").(’ó÷úÿÿÿÿ
+|
+java:S1319¹"eThe type of "cands" should be an interface such as "List" rather than the implementation "ArrayList".(Æ¥å§
+|
+java:S1319¹"eThe type of "daddy" should be an interface such as "List" rather than the implementation "ArrayList".(Æ¥å§
+i
+java:S1104"NMake id a static final constant or non-public and provide accessors if needed.(ÍéÌ‘øÿÿÿÿ
+j
+java:S1104	"OMake buy a static final constant or non-public and provide accessors if needed.(ˆéğùÿÿÿÿ
+k
+java:S1104
+"UMake enterTime a static final constant or non-public and provide accessors if needed.(†ß“¢
+f
+java:S1104é"OMake arr a static final constant or non-public and provide accessors if needed.(À¸Ö
+d
+java:S1104ê"NMake op a static final constant or non-public and provide accessors if needed.(ô§¾
+e
+java:S38247"HReplace this "Map.containsKey()" with a call to "Map.computeIfAbsent()".(ÌÜĞÁ8ÀÑãı“1
+C
+java:S1172"(Remove this unused method parameter "o".(ß·ÆÏúÿÿÿÿ
+m
+java:S37763"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¸äøáûÿÿÿÿ
+X
+java:S1117\"=Rename "customers" which hides the field declared at line 38.(Óÿà™ÿÿÿÿÿ
+n
+java:S3776‡"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(²³óŸøÿÿÿÿ
+@
+java:S2140ô")Use "java.util.Random.nextInt()" instead.(Œš†é
+E
+java:S2140ø")Use "java.util.Random.nextInt()" instead.(İÂÔ˜ıÿÿÿÿ
+D
+java:S1125ù"(Remove the unnecessary boolean literals.(¤¼¸¼şÿÿÿÿ
+[	java:S106™"9Replace this use of System.out or System.err by a logger.(óŞâÅúÿÿÿÿ8˜ò‰•”1
+L
+java:S2140œ")Use "java.util.Random.nextInt()" instead.(òŞ©Ğÿÿÿÿÿ8˜ò‰•”1
+[	java:S106£"9Replace this use of System.out or System.err by a logger.(Ä¥¤üÿÿÿÿ8™ò‰•”1
+[	java:S106¥"9Replace this use of System.out or System.err by a logger.(æ–İ€ÿÿÿÿÿ8™ò‰•”1
+V	java:S106¦"9Replace this use of System.out or System.err by a logger.(õª³à8™ò‰•”1
+V	java:S106§"9Replace this use of System.out or System.err by a logger.(Š‡Ü€8™ò‰•”1
+[	java:S106¨"9Replace this use of System.out or System.err by a logger.(¶›üÿÿÿÿÿ8™ò‰•”1
+[	java:S106¬"9Replace this use of System.out or System.err by a logger.(¨Ö®¨ùÿÿÿÿ8™ò‰•”1
+X	java:S125®"<This block of commented-out lines of code should be removed.(ŞÇ«A8ª³‰•”1

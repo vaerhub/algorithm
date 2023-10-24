@@ -1,0 +1,38 @@
+
+k
+java:S1104"PMake MAXM a static final constant or non-public and provide accessors if needed.(¹£ú­şÿÿÿÿ
+g
+java:S1104"QMake edges a static final constant or non-public and provide accessors if needed.(ªÚİµ
+k
+java:S11043"PMake MAXN a static final constant or non-public and provide accessors if needed.(ğ’÷êşÿÿÿÿ
+h
+java:S11045"RMake father a static final constant or non-public and provide accessors if needed.(Óûí–
+f
+java:S11047"PMake size a static final constant or non-public and provide accessors if needed.(‹º†²
+f
+java:S11049"PMake help a static final constant or non-public and provide accessors if needed.(±‡ù
+E
+java:S1444"*Make this "public static MAXM" field final(¹£ú­şÿÿÿÿ
+A
+java:S1444"+Make this "public static edges" field final(ªÚİµ
+E
+java:S14443"*Make this "public static MAXN" field final(ğ’÷êşÿÿÿÿ
+B
+java:S14445",Make this "public static father" field final(Óûí–
+@
+java:S14447"*Make this "public static size" field final(‹º†²
+@
+java:S14449"*Make this "public static help" field final(±‡ù
+j
+java:S3008"ORename this field "MAXM" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹£ú­şÿÿÿÿ
+j
+java:S30083"ORename this field "MAXN" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ’÷êşÿÿÿÿ
+3
+java:S2386"Make this member "protected".(ªÚİµ
+3
+java:S23865"Make this member "protected".(Óûí–
+3
+java:S23867"Make this member "protected".(‹º†²
+3
+java:S23869"Make this member "protected".(±‡ù
+S	java:S106"9Replace this use of System.out or System.err by a logger.(íÏ©²üÿÿÿÿ

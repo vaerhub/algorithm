@@ -1,0 +1,54 @@
+
+f	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÁ°Ø
+f	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÁ°Ø
+f	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÁ°Ø
+k	java:S117\"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”¢éÄøÿÿÿÿ
+k	java:S117\"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”¢éÄøÿÿÿÿ
+k	java:S117\"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”¢éÄøÿÿÿÿ
+k	java:S117m"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÈ¯ˆüÿÿÿÿ
+k	java:S117m"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÈ¯ˆüÿÿÿÿ
+g	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼¿†Û
+g	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼¿†Û
+g	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼¿†Û
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘çš„
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘çš„
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘çš„
+f	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æƒ%
+f	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æƒ%
+g	java:S117±"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ä¹È
+l	java:S117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆŸøüÿÿÿÿ
+g	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹×Ùš
+g	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú·›
+l	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ÛåÃşÿÿÿÿ
+g	java:S117Ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹×Ùš
+g	java:S117È"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú·›
+g	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£«¹è
+l	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶”Ìüúÿÿÿÿ
+l	java:S117Ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€›ñúÿÿÿÿ
+l	java:S117Ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êûÇÎşÿÿÿÿ
+g	java:S117Û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğĞ›¬
+f
+java:S1104€"OMake arr a static final constant or non-public and provide accessors if needed.(À¸Ö
+i	java:S116"ORename this field "MAXN" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àº–úüÿÿÿÿ
+E
+java:S2140 ")Use "java.util.Random.nextInt()" instead.(’ğŞ½üÿÿÿÿ
+f
+java:S1764£"JCorrect one of the identical sub-expressions on both sides of operator "-"(šø¯›ÿÿÿÿÿ
+E
+java:S2140£")Use "java.util.Random.nextInt()" instead.(šø¯›ÿÿÿÿÿ
+E
+java:S2140£")Use "java.util.Random.nextInt()" instead.(šø¯›ÿÿÿÿÿ
+E
+java:S2140·")Use "java.util.Random.nextInt()" instead.(Ô˜œÑøÿÿÿÿ
+@
+java:S2140¸")Use "java.util.Random.nextInt()" instead.(Îÿıç
+f
+java:S1764»"JCorrect one of the identical sub-expressions on both sides of operator "-"(˜ÛåÃşÿÿÿÿ
+E
+java:S2140»")Use "java.util.Random.nextInt()" instead.(˜ÛåÃşÿÿÿÿ
+E
+java:S2140»")Use "java.util.Random.nextInt()" instead.(˜ÛåÃşÿÿÿÿ
+E
+java:S2140Å")Use "java.util.Random.nextInt()" instead.(Ô˜œÑøÿÿÿÿ
+@
+java:S2140Æ")Use "java.util.Random.nextInt()" instead.(Îÿıç

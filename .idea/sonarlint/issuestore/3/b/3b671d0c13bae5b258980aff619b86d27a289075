@@ -1,0 +1,16 @@
+
+s
+java:S1104"QMake value a static final constant or non-public and provide accessors if needed.(‚¯¥ùÿÿÿÿ8ÎºØì”1
+r
+java:S1104"PMake next a static final constant or non-public and provide accessors if needed.(±±èÃøÿÿÿÿ8ÎºØì”1
+r
+java:S2259¥"OA "NullPointerException" could be thrown; "getIntersectNode()" can return null.(º ¨ıÿÿÿÿ8òææì”1
+r
+java:S2259½"OA "NullPointerException" could be thrown; "getIntersectNode()" can return null.(º ¨ıÿÿÿÿ8òææì”1
+r
+java:S2259¶"OA "NullPointerException" could be thrown; "getIntersectNode()" can return null.(º ¨ıÿÿÿÿ8òææì”1
+n
+java:S3776m"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(œÒäI8õºØì”1
+[	java:S106¥"9Replace this use of System.out or System.err by a logger.(º ¨ıÿÿÿÿ8çæì”1
+[	java:S106¶"9Replace this use of System.out or System.err by a logger.(º ¨ıÿÿÿÿ8çæì”1
+[	java:S106½"9Replace this use of System.out or System.err by a logger.(º ¨ıÿÿÿÿ8çæì”1

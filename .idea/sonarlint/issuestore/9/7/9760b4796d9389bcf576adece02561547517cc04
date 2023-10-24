@@ -1,0 +1,20 @@
+
+s
+java:S1104"QMake value a static final constant or non-public and provide accessors if needed.(‚¯¥ùÿÿÿÿ8…†ğ–1
+m
+java:S1104"PMake left a static final constant or non-public and provide accessors if needed.(ó÷ÔÄ8…†ğ–1
+n
+java:S1104"QMake right a static final constant or non-public and provide accessors if needed.(Ö¢è¥8…†ğ–1
+o
+java:S1104"RMake height a static final constant or non-public and provide accessors if needed.(ñ½8…†ğ–1
+r
+java:S1104"UMake nodeCount a static final constant or non-public and provide accessors if needed.(ıá±Š8…†ğ–1
+o
+java:S1104="RMake isFull a static final constant or non-public and provide accessors if needed.(‘‹Ê8…†ğ–1
+o
+java:S1104>"RMake height a static final constant or non-public and provide accessors if needed.(ñ½8…†ğ–1
+F
+java:S2140k")Use "java.util.Random.nextInt()" instead.(ÁíŞ8ı¯ñ–1
+Z	java:S106u"9Replace this use of System.out or System.err by a logger.(óŞâÅúÿÿÿÿ8ş¯ñ–1
+T	java:S106y"9Replace this use of System.out or System.err by a logger.(ŞÊùU8ş¯ñ–1
+Z	java:S106|"9Replace this use of System.out or System.err by a logger.(¨Ö®¨ùÿÿÿÿ8ş¯ñ–1

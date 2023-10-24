@@ -1,0 +1,15 @@
+
+E
+java:S1066%"/Merge this if statement with the enclosing one.(´Ñ§‚
+E
+java:S1066J"/Merge this if statement with the enclosing one.(´Ñ§‚
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(‚¸Éòøÿÿÿÿ
+h
+java:S37764"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(²°®
+R
+java:S18546"7Remove this useless assignment to local variable "ans".(·ÔåÇüÿÿÿÿ
+C
+java:S14816"(Remove this unused "ans" local variable.(·ÔåÇüÿÿÿÿ
+:
+java:S1659\"$Declare "minSum" on a separate line.(Ù±ë¹
