@@ -1,10 +1,0 @@
-
-f
-java:S1104"PMake name a static final constant or non-public and provide accessors if needed.( şÍ¾
-i
-java:S1104"NMake id a static final constant or non-public and provide accessors if needed.(ÍéÌ‘øÿÿÿÿ
-e
-java:S1104"OMake age a static final constant or non-public and provide accessors if needed.(×Áò¿
-M	java:S106;"9Replace this use of System.out or System.err by a logger.(øÃØ
-S	java:S106G"9Replace this use of System.out or System.err by a logger.(ñ›ò¾øÿÿÿÿ
-N	java:S106J"9Replace this use of System.out or System.err by a logger.(ë·©ë

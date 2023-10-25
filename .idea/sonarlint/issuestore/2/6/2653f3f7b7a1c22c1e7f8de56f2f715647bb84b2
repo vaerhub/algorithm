@@ -1,15 +1,0 @@
-
-f
-java:S1104B"PMake node a static final constant or non-public and provide accessors if needed.(Ù‚é÷
-o
-java:S1104C"TMake distance a static final constant or non-public and provide accessors if needed.(»‡¼´ÿÿÿÿÿ
-˜
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿‘ƒ´
-P
-java:S1118":Add a private constructor to hide the implicit public one.(Ó½ùŠ
-œ
-java:S1186}"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•ò¨ûÿÿÿÿ
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(·Üó…øÿÿÿÿ
-˜
-java:S1186…"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰ª¡ò
