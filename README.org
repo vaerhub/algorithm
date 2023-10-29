@@ -1,0 +1,2 @@
+* algorithm
+[[file:./basic/day01][]]
